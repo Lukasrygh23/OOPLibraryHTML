@@ -8,7 +8,7 @@ let createLicenseButton = document.querySelector("#createLicense");
 let createLicenseResultField = document.querySelector("#resultField");
 
 //Declare methods.
-let createBook = () => {
+let createLicense = () => {
 
     let bId = bookIdField.value;
     let rtDate = returnDateField.value;
@@ -43,25 +43,9 @@ let createLicenseRequest = (license) => {
         console.log("Creation successful!");
         createLicenseResultField.innerHTML = "New license added to the database!";
     });
-}
-
-let createBookRequest = (book) => {
-    fetch("http://localhost:9000/book/create", {
-        method: "POST", //Data!
-        headers: {
-            "Content-type": "application/JSON",
-        },
-        body: JSON.stringify(book),
-    }).then((response) => {
-        if (response.status !== 201) {
-            console.error(`Status: ${response.status}`);
-            return;
-        }
-        console.log("Creation successful!");
-        createLicenseResultField.innerHTML = "New book added to the database!";
-    });
 };
 
 
+
 //Add event listeners.
-createBookButton.addEventListener('click', createBook);
+createLicenseButton.addEventListener('click', createLicense);
