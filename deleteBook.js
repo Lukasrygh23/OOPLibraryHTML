@@ -1,19 +1,19 @@
 "use strict";
 
 //Declare it all.
-let idField = document.querySelector("#bookId");
-let deleteButton = document.querySelector("#deleteBook");
+let bookIdField = document.querySelector("#bookId");
+let deleteBookButton = document.querySelector("#deleteBook");
 
-let resultField = document.querySelector("#confirm");
+let resultDBookField = document.querySelector("#confirm");
 
 //Functions next
 
 let deleteBook = () => {
-    let num = Number(idField.value);
-    deleteRequest(num);
+    let num = Number(bookIdField.value);
+    deleteBookRequest(num);
 };
 
-let deleteRequest = (num) => {
+let deleteBookRequest = (num) => {
     let url = "http://localhost:9000/book/delete/" + num;
     console.log(url);
 
@@ -26,10 +26,10 @@ let deleteRequest = (num) => {
                 return;
             }
             console.log("Successful delete.");
-            resultField.innerHTML = "Deletion successful of book with id " + num + ". Please leave a note as to why once we implement a deletion tracker.";
+            resultDBookField.innerHTML = "Deletion successful of book with id " + num + ". Please leave a note as to why once we implement a deletion tracker.";
         });
 };
 
 //Buttons at the bottom.
 
-deleteButton.addEventListener('click', deleteBook);
+deleteBookButton.addEventListener('click', deleteBook);
