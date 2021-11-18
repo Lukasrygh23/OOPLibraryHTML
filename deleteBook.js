@@ -4,6 +4,8 @@
 let idField = document.querySelector("#bookId");
 let deleteButton = document.querySelector("#deleteBook");
 
+let resultField = document.querySelector("#confirm");
+
 //Functions next
 
 let deleteBook = () => {
@@ -12,7 +14,7 @@ let deleteBook = () => {
 };
 
 let deleteRequest = (num) => {
-    let url = "http://localhost:9000/delete/" + num;
+    let url = "http://localhost:9000/book/delete/" + num;
     console.log(url);
 
     fetch(url, {
@@ -24,7 +26,7 @@ let deleteRequest = (num) => {
                 return;
             }
             console.log("Successful delete.");
-            resultField.innerHTML = "Deletion successful of book with id " + num + ". Please leave a note as to why once we implement a deletion tracker."
+            resultField.innerHTML = "Deletion successful of book with id " + num + ". Please leave a note as to why once we implement a deletion tracker.";
         });
 };
 
