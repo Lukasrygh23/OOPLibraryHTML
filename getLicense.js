@@ -1,8 +1,11 @@
 "use strict";
 
-let idField = document.querySelector("#bookId");
+let idField = document.querySelector("#licenseId");
 let getButton = document.querySelector("#getButton");
 let resultPara = document.querySelector("#resultBox");
+
+let usernameField = document.querySelector("#userName");
+let returnDateField = document.querySelector("#returnDate");
 
 let nameField = document.querySelector("#nameField");
 let authorField = document.querySelector("#authorField");
@@ -14,7 +17,7 @@ let postData = () => {
 };
 
 let getData = (num) => {
-    let url = "http://localhost:9000/book/getBook/" + num;
+    let url = "http://localhost:9000/license/get/" + num;
     console.log(url)
 
     fetch(url)
@@ -25,12 +28,14 @@ let getData = (num) => {
             }
             response.json().then((data) => {
                 console.log(data);
-                console.log(data.bookName);
+
 
                 //TODO 
                 resultPara.innerHTML = data;
-                nameField.innerHTML = data.bookName;
-                authorField.innerHTML = data.authorName;
+                usernameField.innerHTML = data.recipientUsername;
+                returnDateField.innerHTML = data.returnDate;
+                nameField.innerHTML = data.book.bookName;
+                authorField.innerHTML = data.book.authorName;
 
                 return data;
             }
