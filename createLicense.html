@@ -8,38 +8,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Create a Book!</title>
+    <title>Take out a book!</title>
 </head>
 
 <body>
 
     <Main>
-        <h1>Book creation</h1>
-        <h2>Please insert all values below.</h2>
-
+        <h1>Book Withdrawal</h1>
         <div>
-            <h4>What is the book's title?</h4>
-            <input type="text" id="bookName"></input>
+            <h2>Which book would you like to take out? Currently this requires the ID.</h2>
+            <input type="number" id=bookId></input>
         </div>
-
         <div>
-
-            <h4>What is the author's name?</h4>
-            <input type="text" id="authorName"></input>
+            <h2>When would you like to return it?</h2>
+            <input type="date" id=returnDate></input>
+        </div>
+        <div>
+            <h2>What name would you like to use for this withdrawal?</h2>
+            <input type="text" id="username"></input>
         </div>
         <br>
-        <button id="createBook">Finalise Creation</button>
-
         <div>
-            <p id="resultField">No books have been created yet.</p>
+            <button id="createLicense">Take out a book!</button>
+            <p id="resultField">You have not yet taken out a book.</p>
         </div>
-
-
     </Main>
 
-
-
-    <script src="createBook.js"></script>
+    <script src="createLicense.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
