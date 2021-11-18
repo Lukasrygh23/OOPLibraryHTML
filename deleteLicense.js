@@ -26,7 +26,7 @@ let deleteRequest = (num) => {
                 return;
             }
             console.log("Successful delete.");
-            resultDLicField.innerHTML = "Deletion successful of book with id " + num + ". Please leave a note as to why once we implement a deletion tracker.";
+            resultDLicField.innerHTML = "Deletion successful of License with id " + num + ". Please leave a note as to why once we implement a deletion tracker.";
         });
 };
 
