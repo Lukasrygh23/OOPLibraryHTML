@@ -2,9 +2,9 @@
 
 //Declare Fields
 let bookIdField = document.querySelector("#bookId");
-let booknameField = document.querySelector("#bookName");
+let bookNameField = document.querySelector("#bookName");
 let authorNameField = document.querySelector("#authorName");
-let updateBookButton = document.querySelector("#updateButton");
+let updateBookButton = document.querySelector("#updateBook");
 let updateResultField = document.querySelector("#resultField");
 
 //Declare methods.
@@ -31,7 +31,7 @@ let updateBookRequest = (id, book) => {
         },
         body: JSON.stringify(book),
     }).then((response) => {
-        if (response.status !== 201) {
+        if (response.status !== 202) {
             console.error(`Status: ${response.status}`);
             return;
         }

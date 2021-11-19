@@ -1,7 +1,7 @@
 "use strict";
 
 //Declare fields
-let bookIdField = docuument.querySelector("#bookId");
+let bookIdField = document.querySelector("#bookId");
 let returnDateField = document.querySelector("#returnDate");
 let usernameField = document.querySelector("#username");
 let createLicenseButton = document.querySelector("#createLicense");
