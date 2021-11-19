@@ -4,7 +4,7 @@
 let licenseIdField = document.querySelector("#licenseId");
 let usernameField = document.querySelector("#username")
 let returnDateField = document.querySelector("#returnDate");
-let updateLicenseButton = document.querySelector("#updateButton");
+let updateLicenseButton = document.querySelector("#updateLicense");
 let updateResultField = document.querySelector("#resultField");
 
 //Declare methods.
@@ -32,7 +32,7 @@ let updateLicenseRequest = (id, license) => {
         },
         body: JSON.stringify(license),
     }).then((response) => {
-        if (response.status !== 201) {
+        if (response.status !== 202) {
             console.error(`Status: ${response.status}`);
             return;
         }
