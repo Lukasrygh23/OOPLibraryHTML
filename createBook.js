@@ -1,7 +1,7 @@
 "use strict";
 
 //Declare fields
-let bookNameField = docuument.querySelector("#bookName");
+let bookNameField = document.querySelector("#bookName");
 let authorNameField = document.querySelector("#authorName");
 let createBookButton = document.querySelector("#createBook");
 let createBookResultField = document.querySelector("#resultField");
@@ -13,9 +13,9 @@ let createBook = () => {
     let aName = authorNameField.value;
 
     let newBook = {
-        bookName = bName,
-        authorName = aName
-    }
+        bookName: bName,
+        authorName: aName
+    };
 
     console.log(newBook);
     createBookRequest(newBook);
