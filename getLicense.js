@@ -7,8 +7,8 @@ let resultPara = document.querySelector("#resultBox");
 let usernameField = document.querySelector("#userName");
 let returnDateField = document.querySelector("#returnDate");
 
-let nameField = document.querySelector("#nameField");
-let authorField = document.querySelector("#authorField");
+let nameField = document.querySelector("#bookTitle");
+let authorField = document.querySelector("#authorName");
 
 let postData = () => {
     let num = Number(idField.value);
@@ -22,7 +22,7 @@ let getData = (num) => {
 
     fetch(url)
         .then((response) => {
-            if (response.status !== 202) {
+            if (response.status !== 200) {
                 console.error(`status: ${response.status}`);
                 return;
             }
@@ -31,7 +31,7 @@ let getData = (num) => {
 
 
                 //TODO 
-                resultPara.innerHTML = data;
+                resultPara.innerHTML = JSON.stringify(data);
                 usernameField.innerHTML = data.recipientUsername;
                 returnDateField.innerHTML = data.returnDate;
                 nameField.innerHTML = data.book.bookName;
