@@ -37,8 +37,13 @@ let makeCard = (obj) => {
     p.className = "card-text";
     p.textContent = JSON.stringify(obj);
 
+    let pactual = document.createElement("p");
+    p.className = "card-text";
+    p.textContent = `Return date: ${obj.returnDate}, Username: ${obj.recipientUsername}, Book Name:${obj.book.bookName}, Author Name:${obj.book.authorName}`
+
     card.appendChild(div2);
     card.appendChild(p);
+    card.appendChild(pactual);
     cardHolder.appendChild(card);
 };
 
