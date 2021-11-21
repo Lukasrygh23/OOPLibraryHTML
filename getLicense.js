@@ -24,6 +24,7 @@ let getData = (num) => {
         .then((response) => {
             if (response.status !== 200) {
                 console.error(`status: ${response.status}`);
+                resultPara.innerHTML = `status: ${response.status}`;
                 return;
             }
             response.json().then((data) => {
@@ -31,11 +32,11 @@ let getData = (num) => {
 
 
                 //TODO 
-                resultPara.innerHTML = JSON.stringify(data);
-                usernameField.innerHTML = data.recipientUsername;
-                returnDateField.innerHTML = data.returnDate;
-                nameField.innerHTML = data.book.bookName;
-                authorField.innerHTML = data.book.authorName;
+                resultPara.innerHTML = `Return date: ${data.returnDate}, Username: ${data.recipientUsername}, Book Name:${data.book.bookName}, Author Name:${data.book.authorName}`;
+                //usernameField.innerHTML = data.recipientUsername;
+                //returnDateField.innerHTML = data.returnDate;
+                //nameField.innerHTML = data.book.bookName;
+                //authorField.innerHTML = data.book.authorName;
 
                 return data;
             }
