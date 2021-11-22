@@ -12,22 +12,30 @@
 </head>
 
 <body>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a id="homeButton" class="navbar-brand" href="http://127.0.0.1:5500/index.html">Library</a>
+        </div>
+    </nav>
 
     <Main>
-        <h2>Check a book!</h2>
+        <h2 id="toph2">Check a book!</h2>
         <p>Please put the book's ID here.</p>
         <input id="bookId" type="number"></input>
         <div>
             <button type="button" id="getButton">Click here!</button>
         </div>
     </Main>
+
     <br>
-    <div id="resultDiv">
-        <p id="resultBox">Json incoming!</p>
+    <div id="resultDiv" , class="card col-3">
+        <div class="card-body">
+            <p id="resultBox" , class="card-text" , style="width: 18rem"></p>
 
-        <p id="bookTitle"></p>
+            <p id="bookTitle"></p>
 
-        <p id="authorName"></p>
+            <p id="authorName"></p>
+        </div>
     </div>
 
     <script src="getBook.js"></script>

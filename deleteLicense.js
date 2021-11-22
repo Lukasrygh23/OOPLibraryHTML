@@ -23,6 +23,7 @@ let deleteRequest = (num) => {
         .then((response) => {
             if (response.status !== 204) {
                 console.error(`status: ${response.status}`);
+                resultDLicField.innerHTML = `Error code: ${response.status}`;
                 return;
             }
             console.log("Successful delete.");

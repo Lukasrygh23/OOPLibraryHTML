@@ -23,6 +23,7 @@ let deleteBookRequest = (num) => {
         .then((response) => {
             if (response.status !== 204) {
                 console.error(`status: ${response.status}`);
+                resultDBookField.innerHTML = `Error status: ${response.status}`;
                 return;
             }
             console.log("Successful delete.");

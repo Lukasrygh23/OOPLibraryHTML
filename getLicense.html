@@ -13,6 +13,12 @@
 
 <body>
 
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a id="homeButton" class="navbar-brand" href="http://127.0.0.1:5500/index.html">Library</a>
+        </div>
+    </nav>
+
     <Main>
         <h2>Check a License!</h2>
         <p>Please put the License's ID here.</p>
@@ -22,16 +28,18 @@
         </div>
     </Main>
 
-    <div id="resultDiv">
-        <p id="resultBox">Json incoming!</p>
+    <div id="resultDiv" . class="card col-3">
+        <div class="card-body">
+            <p id="resultBox" , class="card-text"></p>
 
-        <p id="userName"></p>
+            <p id="userName"></p>
 
-        <p id="returnDate"></p>
+            <p id="returnDate"></p>
 
-        <p id="bookTitle"></p>
+            <p id="bookTitle"></p>
 
-        <p id="authorName"></p>
+            <p id="authorName"></p>
+        </div>
     </div>
 
     <script src="getLicense.js"></script>

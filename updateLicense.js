@@ -24,6 +24,10 @@ let updateLicense = () => {
 
 
 let updateLicenseRequest = (id, license) => {
+    if (id == "") {
+        updateResultField.innerHTML = `This cannot be null.`;
+        return;
+    }
     let url = "http://localhost:9000/license/update/" + id;
     fetch(url, {
         method: "PUT",
@@ -34,6 +38,7 @@ let updateLicenseRequest = (id, license) => {
     }).then((response) => {
         if (response.status !== 202) {
             console.error(`Status: ${response.status}`);
+            updateResultField.innerHTML = `Status: ${response.status}`;
             return;
         }
         console.log("Update Successful!");
