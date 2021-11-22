@@ -7,18 +7,16 @@ This is purely the front end of the program, and cannot run without the Spring d
 
 ### Prerequisites
 
-You must also have [The front end](https://github.com/Lukasrygh23/OOPLibraryHTML/tree/dev) downloaded and ready to use.
+You must also have [The back end](https://github.com/Lukasrygh23/OOPLibrarySpring) downloaded and ready to use.
 
 ### Installing
 
-No installation is required. Simply run the fat.jar. 
+No installation is required. But you must run the .jar or otherwise have OOPLibrarySpring running on your system first.
 
-## Running the tests
+
 ### Unit Tests 
 
-All of the normal unit tests are self-contained.
-
-The Selenium tests require the chrome browser to be installed and updated to the most recent version, and the front end in Prerequisites to be hosted on a server (Visual studio supports this with some addons).
+All tests are contained within OOPLibrarySpring.
 
 ## Built With
 
