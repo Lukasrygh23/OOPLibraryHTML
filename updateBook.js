@@ -23,6 +23,10 @@ let updateBook = () => {
 };
 
 let updateBookRequest = (id, book) => {
+    if (id == "") {
+        updateResultField.innerHTML = `This cannot be null.`;
+        return;
+    }
     let url = "http://localhost:9000/book/update/" + id;
     fetch(url, {
         method: "PUT",
@@ -33,6 +37,7 @@ let updateBookRequest = (id, book) => {
     }).then((response) => {
         if (response.status !== 202) {
             console.error(`Status: ${response.status}`);
+            updateResultField.innerHTML = `Status: ${response.status}`;
             return;
         }
         console.log("Update Successful!");

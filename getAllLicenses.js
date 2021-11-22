@@ -39,7 +39,7 @@ let makeCard = (obj) => {
 
     let pactual = document.createElement("p");
     p.className = "card-text";
-    p.textContent = `Return date: ${obj.returnDate}, Username: ${obj.recipientUsername}, Book Name:${obj.book.bookName}, Author Name:${obj.book.authorName}`
+    p.textContent = `Id: ${obj.licenseId} Return date: ${obj.returnDate}, Username: ${obj.recipientUsername}, Book Name:${obj.book.bookName}, Author Name:${obj.book.authorName}`
 
     card.appendChild(div2);
     card.appendChild(p);
