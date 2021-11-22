@@ -1,4 +1,4 @@
-# OOPLibrarySpring
+# OOPLibraryHtml
 
 This is a web-based program that can query an IMS database. It can create theoretical Ebooks and temporary 'Licenses' for them. 
 This is purely the front end of the program, and cannot run without the Spring database backend running alongside it. 
